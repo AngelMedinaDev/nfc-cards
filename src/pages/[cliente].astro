@@ -1,0 +1,73 @@
+---
+import clientes from './data/clientes.json';
+
+// Esta función le dice a Astro qué páginas crear basándose en tu JSON
+export function getStaticPaths() {
+  return Object.keys(clientes).map((key) => ({
+    params: { cliente: key },
+    props: { data: clientes[key] },
+  }));
+}
+
+const { cliente } = Astro.params;
+const { data } = Astro.props;
+
+// HACK: Si algún día quieres que el chip mande DIRECTO a Google Maps 
+// sin pasar por esta página, solo descomentas la línea de abajo:
+// return Astro.redirect(data.maps);
+---
+
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{data.nombre} | Califícanos</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: system-ui, -apple-system, sans-serif; 
+            background-color: #f3f4f6; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            padding: 20px;
+        }
+        .card { 
+            background: white; 
+            padding: 2.5rem 2rem; 
+            border-radius: 1.5rem; 
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); 
+            text-align: center; 
+            max-width: 400px; 
+            width: 100%; 
+        }
+        h1 { color: #1f2937; margin-top: 0; margin-bottom: 0.5rem; font-size: 1.5rem;}
+        p { color: #6b7280; margin-bottom: 2rem; font-size: 0.95rem; }
+        .btn { 
+            display: block; 
+            width: 100%; 
+            padding: 1rem; 
+            margin-bottom: 1rem; 
+            border-radius: 0.75rem; 
+            text-decoration: none; 
+            font-weight: 600; 
+            color: white; 
+            transition: transform 0.1s, opacity 0.2s; 
+        }
+        .btn:active { transform: scale(0.98); }
+        .btn-google { background-color: #4285F4; }
+        .btn-insta { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>{data.nombre}</h1>
+        <p>¡Gracias por visitarnos! Tu opinión nos ayuda a darte un mejor servicio.</p>
+
+        <a href={data.maps} class="btn btn-google">🌟 Dejar reseña en Google</a>
+        <a href={data.insta} class="btn btn-insta">📸 Síguenos en Instagram</a>
+    </div>
+</body>
+</html>

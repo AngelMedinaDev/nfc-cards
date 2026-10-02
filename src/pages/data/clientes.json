@@ -1,0 +1,12 @@
+{
+  "demo": {
+    "nombre": "Agencia de prueba",
+    "maps": "https://maps.google.com",
+    "insta": "https://instagram.com"
+  },
+  "tacos-el-primo": {
+    "nombre": "Tacos El Primo",
+    "maps": "https://g.page/r/tu-link-de-google-aqui/review",
+    "insta": "https://instagram.com/tacoselprimo"
+  }
+}
