@@ -7,19 +7,19 @@
     "color": "#0D8ABC"
   },
   "cliente-1": {
-    "nombre": "Tacos El Primo",
+    "nombre": "Syna",
     "maps": "https://www.google.com/maps/place/Neuropsicolog%C3%ADa+%26+Salud+Mental/@25.6474254,-100.2981745,17z/data=!3m1!4b1!4m6!3m5!1s0x8662bf00559ea967:0xd1aba3c231c291d!8m2!3d25.6474254!4d-100.2955996!16s%2Fg%2F11xdtbs62j?entry=ttu&g_ep=EgoyMDI2MDkyOS4wIKXMDSoASAFQAw%3D%3D",
     "insta": "https://www.instagram.com/syna.saludmental/",
     "logo": "https://ui-avatars.com/api/?name=Syna&background=E53935&color=fff&size=128",
     "color": "#E53935"
   },
   "cliente-2": {
-    "nombre": "Tacos El Primo",
+    "nombre": "Syna",
     "maps": "https://www.google.com/maps/place/Neuropsicolog%C3%ADa+%26+Salud+Mental/@25.6474254,-100.2981745,17z/data=!3m1!4b1!4m6!3m5!1s0x8662bf00559ea967:0xd1aba3c231c291d!8m2!3d25.6474254!4d-100.2955996!16s%2Fg%2F11xdtbs62j?entry=ttu&g_ep=EgoyMDI2MDkyOS4wIKXMDSoASAFQAw%3D%3D",
     "redireccion": "maps"
   },
   "cliente-3": {
-    "nombre": "Tacos El Primo",
+    "nombre": "Syna",
     "insta": "https://www.instagram.com/syna.saludmental/",
     "redireccion": "insta"
   }
