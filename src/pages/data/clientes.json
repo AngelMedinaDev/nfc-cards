@@ -8,14 +8,14 @@
   },
   "cliente-1": {
     "nombre": "Syna",
-    "maps": "[https://search.google.com/local/writereview?placeid=ChIJZ6meVQC_YoYRHSkclzy6GgU](https://search.google.com/local/writereview?placeid=ChIJZ6meVQC_YoYRHSkclzy6GgU)",
+    "maps": "https://search.google.com/local/writereview?placeid=ChIJZ6meVQC_YoYRHSkclzy6GgU",
     "insta": "https://www.instagram.com/syna.saludmental/",
     "logo": "https://ui-avatars.com/api/?name=Syna&background=E53935&color=fff&size=128",
     "color": "#E53935"
   },
   "cliente-2": {
     "nombre": "Syna",
-    "maps": "[https://search.google.com/local/writereview?placeid=ChIJZ6meVQC_YoYRHSkclzy6GgU](https://search.google.com/local/writereview?placeid=ChIJZ6meVQC_YoYRHSkclzy6GgU)",
+    "maps": "https://search.google.com/local/writereview?placeid=ChIJZ6meVQC_YoYRHSkclzy6GgU",
     "redireccion": "maps"
   },
   "cliente-3": {
