@@ -22,5 +22,10 @@
     "nombre": "Syna",
     "insta": "https://www.instagram.com/syna.saludmental/",
     "redireccion": "insta"
+  },
+  "cliente-4": {
+    "nombre": "Cattleya",
+    "maps": "https://www.google.com/search?q=cattleya&sca_esv=8474f7961478e1e3&sxsrf=APpeQnuQnMrNNBj8lfE2PStOKLZIZu9yow%3A1791053999369&source=hp&ei=r1DBasqRFPihqtsP_qm28QM&iflsig=ABILxe8AAAAAasFev-PJxVTK8F_mHpCzk58134sp6BU6&ved=0ahUKEwiKpZ2LxJ6XAxX4kGoFHf6ULT4Q4dUDCCk&uact=5&oq=cattleya&gs_lp=Egdnd3Mtd2l6IghjYXR0bGV5YTIEECMYJzIEECMYJzIIEC4YgAQYywEyCBAuGIAEGMsBMggQABiABBjLATIIEAAYgAQYywEyCBAuGIAEGMsBMggQLhiABBjLATIIEC4YgAQYywEyCBAuGIAEGMsBSKIXUABY-BBwAHgAkAEAmAHwBaAB7xWqAQ0wLjEuMy4yLjEuMC4xuAEDyAEA-AEBmAIIoAKaFsICChAuGIAEGIoFGEPCAgoQABiABBiKBRhDwgIFEAAYgATCAgUQLhiABJgDAJIHCzAuMS4zLjIuMS4xoAfLX7IHCzAuMS4zLjIuMS4xuAeaFsIHBTAuMS43yAcfgAgB&sclient=gws-wiz#sv=CAESzQEKuQEStgEKd0FKaVQ0dExrSXFDdEhaSjAxT25USTN3dWlsazR1Rm5EdFVGSmh4ZlRSRHdGRlVXU05hZWRma29sSzFCY1c4dkZ4ZkM4NnZRTU9ZRjNha0Rrb0Z1bkl5VU5JcTdHanVFX0NQaFF0OWlKRTd5YTBocmZyNVZUdnc4Ehd1VkRCYW9fUEM4T3RwODRQLTVHdDZBYxoiQURzcjlmUTQ5MmE0V09tY0pyN2ZMMUQ2NUFhcmNZRGR4QRIEODA1MRoBMyoAMAA4AUAAGAAg-bi6ug9KAhAB",
+    "redireccion": "maps"
   }
 }
