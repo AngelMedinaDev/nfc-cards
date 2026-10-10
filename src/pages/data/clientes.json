@@ -71,8 +71,9 @@
   }
   ,
   "nfc-13": {
-    "nombre": "Libre",
-    "maps": "https://search.google.com/local/writereview?placeid=ChIJxWOQhMW_YoYRjCcyjrDw4LE"
+    "nombre": "Odenta",
+    "maps": "https://search.google.com/local/writereview?placeid=ChIJxWOQhMW_YoYRjCcyjrDw4LE",
+    "redireccion": "maps"
   }
   ,
   "nfc-14": {
