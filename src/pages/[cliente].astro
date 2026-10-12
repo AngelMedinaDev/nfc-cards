@@ -128,9 +128,12 @@ if (datosCliente.redireccion === 'insta' && datosCliente.insta) {
 
       <script>
           const btnCopiar = document.getElementById('btnCopiar');
-          if(btnCopiar){
+          const cuentaElement = document.getElementById('numeroCuenta');
+
+          // Aquí está la magia corregida: verificamos que ambos existan antes de hacer el click
+          if (btnCopiar && cuentaElement) {
               btnCopiar.addEventListener('click', () => {
-                  const cuenta = document.getElementById('numeroCuenta').innerText;
+                  const cuenta = cuentaElement.innerText;
                   navigator.clipboard.writeText(cuenta).then(() => {
                       const textoOriginal = btnCopiar.innerText;
                       btnCopiar.innerText = '✅ ¡Copiado!';

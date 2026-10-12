@@ -106,20 +106,30 @@
     "nombre": "Guiso Rico",
     "redireccion": "whatsapp",
     "whatsapp": {
-      "banco": "BBVA",
-      "titular": "Nombre Dueño Guiso Rico",
-      "cuenta": "4152 3146 2094 8755",
-      "telefono": "52181XXXXXXXX" 
-    },
-    "nfc-20": {
+      "banco": "Pendiente Banco",
+      "titular": "Pendiente Titular",
+      "cuenta": "0000 0000 0000 0000",
+      "telefono": "8183656363"
+    }
+  },
+  "nfc-20": {
     "nombre": "Guiso Rico",
     "redireccion": "whatsapp",
     "whatsapp": {
-      "banco": "BBVA",
-      "titular": "Nombre Dueño Guiso Rico",
-      "cuenta": "4152 3146 2094 8755",
-      "telefono": "52181XXXXXXXX" 
+      "banco": "Pendiente Banco",
+      "titular": "Pendiente Titular",
+      "cuenta": "0000 0000 0000 0000",
+      "telefono": "5218183656363"
     }
-  }
+  },
+  "nfc-21": {
+    "nombre": "Guiso Rico",
+    "redireccion": "whatsapp",
+    "whatsapp": {
+      "banco": "Pendiente Banco",
+      "titular": "Pendiente Titular",
+      "cuenta": "0000 0000 0000 0000",
+      "telefono": "5218183656363"
+    }
   }
 }
