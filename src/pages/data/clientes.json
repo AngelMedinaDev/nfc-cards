@@ -103,8 +103,23 @@
     "redireccion": "maps"
   },
   "nfc-19": {
-    "nombre": "Libre",
-    "maps": "https://search.google.com/local/writereview?placeid=ChIJk9kX-YedpBIRH67fvuJ93Wo",
-    "redireccion": "maps"
+    "nombre": "Guiso Rico",
+    "redireccion": "whatsapp",
+    "whatsapp": {
+      "banco": "BBVA",
+      "titular": "Nombre Dueño Guiso Rico",
+      "cuenta": "4152 3146 2094 8755",
+      "telefono": "52181XXXXXXXX" 
+    },
+    "nfc-20": {
+    "nombre": "Guiso Rico",
+    "redireccion": "whatsapp",
+    "whatsapp": {
+      "banco": "BBVA",
+      "titular": "Nombre Dueño Guiso Rico",
+      "cuenta": "4152 3146 2094 8755",
+      "telefono": "52181XXXXXXXX" 
+    }
+  }
   }
 }

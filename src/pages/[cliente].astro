@@ -9,7 +9,7 @@ const datosCliente = (clientes as any)[cliente as string];
 
 // 3. Seguridad: Si escanean un QR de un cliente que borraste o no existe, mándalos a tu página principal
 if (!datosCliente) {
-  return Astro.redirect('/', 302);
+  return Astro.redirect('https://angelmedinarivas.dev', 302);
 }
 
 // 4. Redirección instantánea a Google Maps
@@ -22,19 +22,136 @@ if (datosCliente.redireccion === 'insta' && datosCliente.insta) {
   return Astro.redirect(datosCliente.insta, 302);
 }
 
-// 6. Si el cliente NO tiene una redirección directa (ej. el genérico Multi-Enlace),
-// entonces sí dejas que cargue el HTML de aquí abajo.
+// 6. Si la redirección es "whatsapp" o "multi", Astro no hace el redirect arriba, 
+// sino que deja que el navegador cargue el HTML y CSS de aquí abajo.
 ---
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conecta con {datosCliente.nombre}</title>
+  
+  {/* ESTILOS EXCLUSIVOS PARA LA TARJETA DE PAGO / WHATSAPP */}
+  {datosCliente.redireccion === 'whatsapp' && (
+      <style>
+          body {
+              margin: 0;
+              padding: 0;
+              font-family: system-ui, -apple-system, sans-serif;
+              background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+              color: white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
+          }
+          .card {
+              background: rgba(255, 255, 255, 0.05);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              border-radius: 24px;
+              padding: 40px 30px;
+              width: 85%;
+              max-width: 380px;
+              text-align: center;
+              box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+          }
+          .nombre-negocio {
+              font-size: 24px;
+              font-weight: 800;
+              margin-bottom: 30px;
+              letter-spacing: 0.5px;
+          }
+          .bank-name {
+              font-size: 13px;
+              color: #94a3b8;
+              text-transform: uppercase;
+              letter-spacing: 1.5px;
+              margin-bottom: 8px;
+          }
+          .titular {
+              font-size: 18px;
+              font-weight: 500;
+              margin-bottom: 12px;
+          }
+          .cuenta {
+              font-size: 26px;
+              font-weight: 700;
+              color: #3b82f6; 
+              letter-spacing: 2px;
+              margin-bottom: 30px;
+          }
+          .btn {
+              display: block;
+              width: 100%;
+              padding: 16px;
+              border-radius: 12px;
+              font-size: 16px;
+              font-weight: 600;
+              text-decoration: none;
+              margin-bottom: 12px;
+              border: none;
+              cursor: pointer;
+              box-sizing: border-box;
+          }
+          .btn-copiar {
+              background: #2563eb;
+              color: white;
+          }
+          .btn-whatsapp {
+              background: #16a34a; 
+              color: white;
+          }
+      </style>
+  )}
 </head>
-<body style={`background-color: ${datosCliente.color}`}>
-  <!-- Aquí pones el diseño de tu Multi-Enlace (Link Hub) -->
-  <img src={datosCliente.logo} alt={`Logo de ${datosCliente.nombre}`} />
-  <h1>{datosCliente.nombre}</h1>
+<body>
+
+  {/* RENDERIZADO DE LA PÁGINA DE WHATSAPP / PAGO */}
+  {datosCliente.redireccion === 'whatsapp' && (
+      <div class="card">
+          <div class="nombre-negocio">{datosCliente.nombre}</div>
+          
+          <div class="bank-name">{datosCliente.whatsapp.banco} - Tarjeta / CLABE</div>
+          <div class="titular">{datosCliente.whatsapp.titular}</div>
+          <div class="cuenta" id="numeroCuenta">{datosCliente.whatsapp.cuenta}</div>
+
+          <button class="btn btn-copiar" id="btnCopiar">
+              📋 Copiar Tarjeta
+          </button>
+          
+          <a href={`https://wa.me/${datosCliente.whatsapp.telefono}?text=Hola, vengo del código en el mostrador.`} class="btn btn-whatsapp" target="_blank">
+              💬 Mandar WhatsApp
+          </a>
+      </div>
+
+      <script>
+          const btnCopiar = document.getElementById('btnCopiar');
+          if(btnCopiar){
+              btnCopiar.addEventListener('click', () => {
+                  const cuenta = document.getElementById('numeroCuenta').innerText;
+                  navigator.clipboard.writeText(cuenta).then(() => {
+                      const textoOriginal = btnCopiar.innerText;
+                      btnCopiar.innerText = '✅ ¡Copiado!';
+                      btnCopiar.style.background = '#059669';
+                      setTimeout(() => {
+                          btnCopiar.innerText = textoOriginal;
+                          btnCopiar.style.background = '#2563eb';
+                      }, 2000);
+                  });
+              });
+          }
+      </script>
+  )}
+
+  {/* AQUI DEJÉ LO TUYO POR SI TIENEN UN MULTI-ENLACE NORMAL */}
+  {datosCliente.redireccion === 'multi' && (
+      <div style={`background-color: ${datosCliente.color}; text-align:center; height: 100vh; padding-top: 50px;`}>
+          <img src={datosCliente.logo} alt={`Logo de ${datosCliente.nombre}`} />
+          <h1 style="color: white;">{datosCliente.nombre}</h1>
+      </div>
+  )}
+
 </body>
 </html>
